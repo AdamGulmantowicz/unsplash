@@ -1,15 +1,15 @@
-import {
-    createApi
-} from "unsplash-js";
+import List from "./components/list";
 
-const browserApi = createApi({
-    apiUrl: 'http://localhost:3000/unsplash',
-});
+async function render(selector, Component) {
+    const element = document.getElementById(selector);
+    let content = '';
+    if (Component.constructor.name === 'AsyncFunction') {
+        content = await Component();
+    } else {
+        content = Component();
+    }
 
-console.log(browserApi);
+    element.insertAdjacentHTML('afterbegin', content);
+}
 
-(async function () {
-    const rest = await browserApi.photos.list();
-
-    console.log(rest);
-})()
+render('content', List);

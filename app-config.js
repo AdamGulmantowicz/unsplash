@@ -7,7 +7,6 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
-// const { createApi } = require('unsplash-js');
 const proxy = require('express-http-proxy');
 
 // Some basic configurations(setting static files path, rate limiter, cookie parser)

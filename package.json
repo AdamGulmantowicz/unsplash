@@ -1,0 +1,41 @@
+{
+  "name": "unsplash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon app.js",
+    "watch": "parcel watch index.html",
+    "start": "concurrently \"npm run watch\" \"npm run server\"",
+    "run:prod": "node app.js"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Adam Gulmantowicz",
+  "license": "ISC",
+  "devDependencies": {
+    "compression": "^1.7.4",
+    "concurrently": "^6.2.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.2",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-rate-limit": "^5.2.6",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
+    "parcel-bundler": "^1.12.5",
+    "xss-clean": "^0.1.1"
+  },
+  "dependencies": {
+    "unsplash-js": "^7.0.11"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}
